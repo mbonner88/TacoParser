@@ -55,9 +55,10 @@ namespace LoggingKata
 
             for(int i = 0; i < lines.Length; i++)
             {
+
                 var locA = locations[i];
                 var corA = new GeoCoordinate() { Latitude = locA.Location.Latitude, Longitude = locA.Location.Longitude };
-
+                logger.LogInfo($"Coordinate A: {corA}");
                 for(int j = 0; j < lines.Length; j++)
                 {
                     var locB = locations[j];
